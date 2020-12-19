@@ -593,7 +593,7 @@ func TestConnCloseWrite(t *testing.T) {
 		}
 		defer srv.Close()
 
-		data, err := io.ReadAll(srv)
+		data, err := ioutil.ReadAll(srv)
 		if err != nil {
 			return err
 		}
@@ -634,7 +634,7 @@ func TestConnCloseWrite(t *testing.T) {
 			return fmt.Errorf("CloseWrite error = %v; want errShutdown", err)
 		}
 
-		data, err := io.ReadAll(conn)
+		data, err := ioutil.ReadAll(conn)
 		if err != nil {
 			return err
 		}
@@ -697,7 +697,7 @@ func TestWarningAlertFlood(t *testing.T) {
 		}
 		defer srv.Close()
 
-		_, err = io.ReadAll(srv)
+		_, err = ioutil.ReadAll(srv)
 		if err == nil {
 			return errors.New("unexpected lack of error from server")
 		}
