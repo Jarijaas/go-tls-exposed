@@ -7,7 +7,7 @@ This was done in order to defeat tls fingerprint checks that some web services p
 such as the Google Android Authentication API.
 
 
-Do not use this module for security sensitive work because I may have introduced vulnerabilities in to
+Do not use this module for security sensitive work because I may have introduced vulnerabilities into
 the tls package.
 
 The following parameters were added into the `tls.Config` struct:
